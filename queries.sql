@@ -148,11 +148,11 @@ SELECT
     COUNT(*) AS conteggio
 FROM
     clienti
-INNER JOIN
+JOIN
     ordini ON clienti.cod_fiscale = ordini.cod_fiscale_cliente
-INNER JOIN
+JOIN
     ordini_pizze ON ordini.numero = ordini_pizze.numero_ordine
-INNER JOIN
+JOIN
     pizze ON ordini_pizze.nome_pizza = pizze.nome
 GROUP BY
     clienti.cod_fiscale, clienti.nome, clienti.cognome, pizze.nome
