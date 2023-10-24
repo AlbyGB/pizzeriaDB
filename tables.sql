@@ -9,6 +9,7 @@ CREATE TABLE ordini (
     numero SERIAL PRIMARY KEY ,
     tipo VARCHAR(50),
     cod_fiscale_cliente CHAR(16),
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (cod_fiscale_cliente) REFERENCES clienti(cod_fiscale)
 );
 
